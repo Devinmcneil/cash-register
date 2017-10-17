@@ -234,6 +234,7 @@
             this.Print.TabIndex = 24;
             this.Print.Text = "print";
             this.Print.UseVisualStyleBackColor = true;
+            this.Print.Click += new System.EventHandler(this.Print_Click);
             // 
             // changeTotal
             // 

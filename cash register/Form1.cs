@@ -27,6 +27,17 @@ namespace cash_register
         double tenderedAmount = 0;
         double subTotal, taxAmount, totalWithTax, change;
 
+        private void Print_Click(object sender, EventArgs e)
+        {
+            Graphics formGraphics = this.CreateGraphics();
+            Pen drawPen = new Pen(Color.Yellow, 10);
+            SolidBrush drawBrush = new SolidBrush(Color.Yellow);
+            Graphics fg = this.CreateGraphics();
+
+            formGraphics.DrawRectangle(drawPen, 235, 0, 400, 400);
+            formGraphics.FillRectangle(drawBrush, 235, 0, 400, 400);
+        }
+
         private void tenderButton_Click(object sender, EventArgs e)
         {
             tenderedAmount = Convert.ToInt16(tenderedInput.Text);
@@ -38,17 +49,6 @@ namespace cash_register
         public Form1()
         {
             InitializeComponent();
-
-            Graphics formGraphics = this.CreateGraphics();
-            Pen drawPen = new Pen(Color.Red, 10);
-            SolidBrush drawBrush = new SolidBrush(Color.Black);
-            Graphics fg = this.CreateGraphics();
-
-
-
-           
-
-            
         }
 
         private void calcButton_Click(object sender, EventArgs e)
